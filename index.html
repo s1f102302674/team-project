@@ -5,13 +5,17 @@
         <title>チームで作るWebサイト</title>
         <link rel="stylesheet" href="css/index.css">
     </head>
+    <!-- これはHTMLコメントです -->
+    <!--プログラムとして認識されません-->
     <body>
-        <div class="circle" id="c1"><p><a href="article1.html">おすすめ記事</a></p></div>
-        <div class="circle" id="c2"><p><a href="article_list.html">記事一覧</a></p></div>
-        <div class="circle" id="c3"><p><a href="gaiyou.html">概要</a></p></div>
+        <!-- circleクラスは楕円のやつや各線に共通するものです。idはそれぞれの楕円や線の大きさや位置などを指定するために設定したものです。 -->
+        <!-- 楕円構造を適切にcssで設定できるようにdivでブロックを作成しました。 -->
+        <a href="article1.html"><div class="circle" id="c1"><p>おすすめ記事</p></div></a>
+        <a href="article_list.html"><div class="circle" id="c2"><p>記事一覧</p></div></a><!--a要素でdivの楕円のブロックをリンクにすることも可能-->
+        <a href="gaiyou.html"><div class="circle" id="c3"><p>概要</p></div></a>
         <div class="circle" id="c4"><p>工事中</p></div>
     
-        <div class="line" id="el1"></div>
+        <div class="line" id="el1"></div><!--これはブロックの背景色や縦幅、横幅などを変えて線にするためのやつなので、中身は基本空白でOK-->
         <div class="line" id="el2"></div>
         <div class="line" id="el3"></div>
         <div class="line" id="el4"></div>

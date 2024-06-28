@@ -1,27 +1,33 @@
-body {
-    background-image: url('live_p_si.jpg');
-    background-repeat: repeat;
-    background-size: 1500px 2000px; /* 画面全体を埋めるようにリサイズ */
-    background-position: center center; /* 画像の中心を中央に配置 */
-}
+/* これはCSSコメントです */
+/*プログラムとして認識されません*/
 
+body {
+    background-image: url('live_p_si.jpg'); /*ここでレポジトリ(team-project)に追加した写真を設定します。なんとなくファイルの名前を打てば候補が出てきます。*/
+    background-repeat: repeat; /*画像が繰り返し表示されます。ただ写真次第で切れ目が見えたりと、見栄えが悪くなることも考えられます。*/
+    background-size: 1500px 2000px; /* 画面全体を埋めるようにリサイズ */
+    background-position: center center; /* 画像の中心を水平と垂直の方向に関して、中央に設定します。 */
+}
+/*写真設定の方法に関する詳細な情報はslackやChat-GPTなどで確認できます。*/
 .circle {
-    position: absolute;
+    position: absolute; /*楕円のブロックの位置を、各要素に影響されずに独立して位置させます（並んで表示されないようにするため）。*/
     background-color: cyan;
     border: solid 1px black;
-    border-radius: 50%;
+    border-radius: 50%; /*ここで四角いブロックの角が丸くなります。半径はブロックの半分の縦幅または横幅です(今回はその50%を指定)。ブロックのwidthとheightの設定次第では楕円になります。*/
     display: flex;
-    justify-content: center;
+    justify-content: center; /*最後の2つのプロパティで文字を中央にある程度寄せます。text-alignだと上下に関して適用されなかったので、これが適切かと。*/
 }
+/*ここからは荒業で数値を設定していきます。*/
+/*Visual Studio Codeのhtmlの画面の右上にあるプレビューでページの見た目を見ながら進めます。タブを右クリックで、新しいウィンドウで見ることも可能です。*/
+/*ここでは各ブロック毎の設定をします。*/
 #c1 {
-    width: 120px;
-    height: 50px;
+    width: 120px; /*必要に応じてtopとleftの位置も設定しましょう。ちなみにここだけ文字が多いため、widthを120pxにしています。*/
+    height: 50px; /*widthとheightで、楕円（のブロック）の縦幅と横幅を指定します。*/
 }
 #c2 {
-    width: 100px;
+    width: 100px; /*%を使わずに、px単位で指定しましょう。*/
     height: 50px;
-    top: 109px;
-    left: 51px;
+    top: 109px; /*サイト上部からの距離を指定します。*/
+    left: 51px; /*サイトの左からの距離を指定します。*/
 }
 #c3 {
     width: 100px;
@@ -36,21 +42,23 @@ body {
     left: 440px;
 }
 
+/*ここでブロック内のpタグの文字の、上下のずれを修正します。ここは相対単位を使っても問題ないでしょう。*/
 .circle>p {
     margin-top: 0.8em;
 }
 
+/*ここからは線の設定です。*/
 .line {
     position: absolute;
     background-color: greenyellow;
-    width: 2px;
-    transform-origin: top left;
-}
+    width: 2px; /*横幅が短くなり、この時点では縦線っぽくなります。*/
+    transform-origin: top left; /*ブロック（図形）の右上の角を基点に設定します。これにより、回転の中心が右上の角になったり。*/
+} /*続き）ただし、今回は縦線みたいな構造なので、線の上側が回転の中心であるという理解でOKです。*/
 #el1 {
     top: 59px;
     left: 70px;
-    height: 57px;
-    transform: rotate(-25deg);
+    height: 57px; /*線の長さがここで決められます。サイトを見ながら設定します。*/
+    transform: rotate(-25deg); /*時計回りを正の方向として、回転角度を設定します。 60dig = 60° です。回転の中心はさっき設定したとおりです。*/
 }
 #el2 {
     top: 148px;
@@ -80,3 +88,4 @@ body {
     left: 256px;
     border: solid thick yellow;
 }
+/*最後に、設定したサイトを全画面で確認しましょう。一部の数値を相対単位(%,em, etc.)で指定すると、悲惨な見た目になるかも？*/
