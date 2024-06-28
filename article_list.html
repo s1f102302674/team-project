@@ -2,12 +2,32 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>記事一覧</title>
-    <link rel="stylesheet" type="text\css"
-    href="css\article_list.css">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Layout</title>
+    <link rel="stylesheet" href="article_list.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="ロゴ" class="logo">
+            <div class="header-links">
+                <a href="#">記事一覧</a>
+            </div>
+        </div>
+        <div class="sidebar">
+            <a href="article1.html"><div class="circle" id="c1"><p>おすすめ記事</p></div></a>
+            <a href="article_list.html"><div class="circle" id="c2"><p>記事一覧</p></div></a>
+            <a href="#">概要</a>
+            <a href="#">NEWS</a>
+        </div>
+        <div class="main-content">
+            <p class="background-text">背景イメージ画像</p>
+            <h1>スレッド一覧</h1>
+            <p>
+                * 追加順にリンク付きのページのタイトルが列挙される。<br>
+                ただし、メインページで指定されているおすすめスレッドは一番上に表示される。
+            </p>
+        </div>
+    </div>
 </body>
 </html>
