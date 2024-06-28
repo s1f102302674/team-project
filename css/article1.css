@@ -1,0 +1,120 @@
+/*～写真～*/
+body {
+    background-image: url('live_p_si.jpg');
+    background-repeat: repeat;
+    background-size: 1500px 2000px;
+    background-position: center center;
+}
+
+/*～circleブロック～*/
+.circle {
+    position: absolute;
+    background-color: #1E6572;
+    color: white;
+    border: solid 1px black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+/*複数のブロックを一つのブロックで囲み、中のブロックに関して position: relative とすることで、
+そのブロック内では縦、float: left で横に並ぶようになります。*/
+#left_to_right {
+    background-color: white; /*暫定的に白くします。後々色は消します。*/
+    position: absolute;
+    top: 10px;
+    left: 168px;
+}
+#c1 {
+    width: 120px;
+    height: 50px;
+    float: left;
+    position: relative;
+}
+#c2 {
+    width: 100px;
+    height: 50px;
+    float: left;
+    position: relative;
+}
+
+#top_to_bottom {
+    background-color: white; /*暫定的に白くします。後々色は消します。*/
+    position: absolute;
+    top: 180px;
+    left: 10px;
+}
+#c2-1 {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    margin-bottom: 10px;
+}
+#c3 {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    margin-bottom: 10px;
+}
+#c4 {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/*ここでcircleブロック内のpタグの文字の、上下のずれを修正します。ここは相対単位を使っても問題ないでしょう。*/
+.circle>p {
+    margin-top: 0.8em;
+}
+
+/*～線ブロック～*/
+.line {
+    position: relative;
+    background-color: greenyellow;
+    height: 2px;
+    transform-origin: top left;
+    top: 26px;
+}
+#el1 {
+    width: 22px;
+    float: left;
+}
+#el0 {
+    width: 14px;
+    float: left;
+}
+
+/*～その他のブロック～*/
+#icon {
+    color: white;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border: solid thick yellow;
+}
+
+#article_box {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    width: 700px;
+    background-color: white;
+    border: solid thick gray;
+    color: gray;
+}
+
+#article_title {
+    color: white;
+    background-color: #1E6572;
+    position: relative;
+    display: inline-block;
+    margin: 2% 0% 0% 2%;
+    padding: 0px 10px 0px 10px;
+    font-size: 150%;
+}
+
+#article_body {
+    display: inline-block;
+    position: relative;
+    margin: 0% 5% 0% 5%;
+}

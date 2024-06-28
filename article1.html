@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>記事その１</title>
-    <link rel="stylesheet" type="text\css"
-    href="css\article1.css">
+    <link rel="stylesheet" href="css/article1.css">
 </head>
 <body>
-    
+    <!-- circleクラスは楕円のやつや各線に共通するものです。idはそれぞれの楕円や線の大きさや位置などを指定するために設定したものです。 -->
+    <!--複数のブロックを一つのブロックで囲み、
+    中のブロックに関して position: relative とすることで、そのブロック内では縦、float: left で横に並ぶようになります。-->
+    <div id="left_to_right">
+        <div class="line" id="el1"></div>
+        <a href="article1.html"><div class="circle" id="c1"><p>おすすめ記事</p></div></a>
+        <div class="line" id="el0"></div>
+        <a href="article_list.html"><div class="circle" id="c2"><p>記事一覧</p></div></a>
+    </div>
+    <div id="top_to_bottom">
+        <a href="article_list.html"><div class="circle" id="c2-1"><p>記事一覧</p></div></a>
+        <a href="gaiyou.html"><div class="circle" id="c3"><p>概要</p></div></a>
+        <div class="circle" id="c4"><p>工事中</p></div>
+    </div>
+
+    <!--その他のブロック-->
+    <a href="index.html"><div id="icon"><!--メインページへのリンクを追加しました。-->
+        <p>アイコン</p>
+    </div></a>
+    <div id="article_box">
+        <div id="article_title"><p>米津玄師を紹介！</p></div>
+        <div id="article_body"><p>　米津玄師は、日本のシンガーソングライター、音楽プロデューサー、そしてイラストレーターとして多岐にわたる才能を持つアーティストです。
+        彼は徳島県出身で、インターネットを通じて音楽活動を始め、特に「ハチ」という名義でボーカロイドを使用した楽曲がニコニコ動画で大きな話題となりました。
+        2012年から自身の本名である「米津玄師」として活動を本格化させ、その後のアルバムリリースや楽曲提供で国内外での評価を一気に高めました。
+        特にシングル曲「Lemon」が2018年に大ヒットし、YouTubeでの再生回数は数億回を超える驚異的な記録を樹立しました。
+        この楽曲は、ドラマ「アンナチュラル」の主題歌としても使用され、幅広い層に支持されています。
+        米津玄師の音楽は、独自の世界観を持ち、ジャンルを超えて多くのリスナーを魅了しています。
+        キャッチーなメロディラインと詩的な歌詞、そして繊細かつ力強いボーカルは、多くの人々の心に響きます。
+        イラストレーターとしても活動しており、彼のアルバムカバーやミュージックビデオは芸術的で、視覚的にも楽しませてくれます。
+        自身の楽曲に自らイラストを描くことも多く、そのクリエイティブな才能は音楽だけに留まりません。
+        米津玄師の音楽とアートの融合は、日本のエンターテインメントシーンに新たな風を吹き込み続けており、今後も目が離せないアーティストです。</p></div>
+    </div>
 </body>
 </html>
